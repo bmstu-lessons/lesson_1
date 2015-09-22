@@ -2189,16 +2189,14 @@
             var slideAnchor = getSlideAnchor(slide);
 
             var sectionIndex = section.index(SECTION_SEL);
-            
-            var text = sectionIndex;
 
-            if (options.anchors.length) {
+            var text = String(sectionIndex);
+
+            if(options.anchors.length){
                 text = sectionAnchor;
             }
 
-            text = String(text);
-
-            if (slide.length) {
+            if(slide.length){
                 text = text + '-' + slideAnchor;
             }
 

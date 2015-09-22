@@ -8,15 +8,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<script src="js/jquery.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+<script type="text/javascript" src="js/jquery.panzoom.js"></script>
+<script type="text/javascript" src="js/zoom.controll.js"></script>
+    
 
 <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage();
         });
-    </script>
+
+        $(document).ready(function() {
+            $('.zoomed').addZoomControll();
+        });
+</script>
 </head>
 <body>
 
@@ -149,8 +156,9 @@
     <div class="slide" id="slide8">
         <div class="slide-content">
             <h3>Компоненты</h3>
-            
-            <p><img src="./images/lesson_1.1.svg" alt="" /></p>
+            <div class="zoomed">
+                <p><img src="./images/lesson_1.1.svg" alt="" /></p>
+            </div>
         </div>
     </div>
 </div>
@@ -192,7 +200,9 @@
         <div class="slide-content">
             <h3>Интерфейсы</h3>
             
-            <p><img src="./images/lesson_1.1.svg" alt="" /></p>
+            <div class="zoomed">
+                <p><img src="./images/lesson_1.1.svg" alt="" /></p>
+            </div>
         </div>
     </div>
 </div>
